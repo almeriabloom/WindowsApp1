@@ -22,9 +22,31 @@ Partial Class Form1
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.mainMenu = New System.Windows.Forms.MenuStrip()
+        Me.SuspendLayout()
+        '
+        'mainMenu
+        '
+        Me.mainMenu.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.mainMenu.Location = New System.Drawing.Point(0, 0)
+        Me.mainMenu.Name = "mainMenu"
+        Me.mainMenu.Size = New System.Drawing.Size(634, 28)
+        Me.mainMenu.TabIndex = 0
+        Me.mainMenu.Text = "MenuStrip1"
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(634, 602)
+        Me.Controls.Add(Me.mainMenu)
+        Me.MainMenuStrip = Me.mainMenu
+        Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
+    Friend WithEvents mainMenu As MenuStrip
 End Class
